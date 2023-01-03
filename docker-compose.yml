@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  py:
+    build: .
+    ports:
+      - 3002:3002
+    container_name: py
+    volumes:
+      - ./app:/code/app
+      - models:/models
+
+volumes:
+  models:
